@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: cspine-backend
+    environment:
+      YOLO_MODEL_PATH: /app/models/best.pt
+      CLASSIFIER_MODEL_PATH: /app/models/cervical_spondylosis_xgb.pkl
+      FRONTEND_ORIGIN: http://localhost:3000
+      YOLO_CONFIG_DIR: /tmp/Ultralytics
+    volumes:
+      - ./models:/app/models:ro
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    container_name: cspine-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"

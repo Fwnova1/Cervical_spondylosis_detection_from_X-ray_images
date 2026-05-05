@@ -1,0 +1,178 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #111827;
+  background: linear-gradient(135deg, #f5f7ff 0%, #e7f1ff 50%, #f6f9ff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 920px;
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #4b5563;
+}
+
+.form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.row {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.55rem 0.6rem;
+}
+
+button {
+  width: fit-content;
+  border: none;
+  background: #0f4ba0;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.preview img {
+  margin-top: 0.5rem;
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.image-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.preview h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.keypoint-editor {
+  margin-top: 1rem;
+}
+
+.editor-stage {
+  margin-top: 0.6rem;
+  position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0b1220;
+}
+
+.keypoint-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.keypoint-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.keypoint-link {
+  stroke: #22c55e;
+  stroke-width: 1.5;
+}
+
+.keypoint-circle {
+  fill: #fde047;
+  stroke: #14532d;
+  stroke-width: 1.5;
+  cursor: grab;
+}
+
+.keypoint-circle:active {
+  cursor: grabbing;
+}
+
+.keypoint-text {
+  fill: #dcfce7;
+  font-size: 12px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.result {
+  margin-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.features {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.feature {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.55rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}

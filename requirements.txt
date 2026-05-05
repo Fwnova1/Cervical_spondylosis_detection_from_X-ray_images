@@ -1,0 +1,30 @@
+# Full project dependencies (single file)
+#
+# Backend install:
+#   pip install -r backend/requirements.txt
+#
+# Frontend install:
+#   cd frontend
+#   npm.cmd install
+
+############################
+# Backend (Python / pip)
+############################
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+python-multipart==0.0.20
+numpy==1.26.4
+pandas==2.3.1
+scikit-learn==1.7.1
+joblib==1.5.1
+ultralytics==8.3.173
+xgboost==2.1.1
+
+############################
+# Frontend (Node.js / npm)
+# Reference package versions:
+############################
+react@18.3.1
+react-dom@18.3.1
+@vitejs/plugin-react@4.7.0
+vite@5.4.11

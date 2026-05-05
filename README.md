@@ -23,6 +23,7 @@ Place these files in `models/` (repo root):
 - `models/best.pt`
 - `models/cervical_spondylosis_xgb.pkl`
 
+The models can be found here: https://drive.google.com/drive/folders/1fO4c7YnIOq2E7oChOcuL1MUI9DnVob9C?usp=sharing
 You can also override paths with environment variables.
 
 ## Important filename rule
